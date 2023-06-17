@@ -1,8 +1,5 @@
 package com.example.stationski.controllers;
-
 import com.example.stationski.entities.Abonnement;
-import com.example.stationski.entities.Inscription;
-import com.example.stationski.entities.Moniteur;
 import com.example.stationski.entities.TypeAbonnement;
 import com.example.stationski.services.IAbonnementService;
 import lombok.AllArgsConstructor;
@@ -28,10 +25,10 @@ public class AbonnementController {
         return listAbonnement;
     }
 
-
     @GetMapping("/getAbonnementsByDates/{date1}/{date2}")
     public List<Abonnement> getAbonnementsByDates(@PathVariable("date1") @DateTimeFormat(pattern= "yyyy-MM-dd")  LocalDate startDate,
-                                                     @PathVariable("date2") @DateTimeFormat(pattern= "yyyy-MM-dd")  LocalDate endDate){
+                                                  @PathVariable("date2") @DateTimeFormat(pattern= "yyyy-MM-dd")  LocalDate endDate){
         return abonnementService.retrieveAbonnementByDates(startDate, endDate);
     }
+
 }

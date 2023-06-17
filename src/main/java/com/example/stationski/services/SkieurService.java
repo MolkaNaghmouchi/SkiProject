@@ -42,16 +42,16 @@ public class SkieurService implements ISkieurService{
         Cours cours = coursRepository.findByNumCours(numCourse);
         Skieur s = skieurRepository.save(skieur);
         Set<Inscription> inscriptions = new HashSet<>();
-        inscriptions= s.getInscriptions();
+        inscriptions=  s.getInscriptions();
         inscriptions.stream().forEach(
                 inscription ->  {
                     inscription.setCours(cours);
-                  //  inscription.setSkieur(s);
+                    //  inscription.setSkieur(s);
                 }
 
         );
         log.info("fin methode addSkieurAndAssignToCourse");
-      //  t2= date sys - t1
+        //  t2= date sys - t1
         return null;
     }
 

@@ -44,4 +44,5 @@ public class SkieurController {
         return nombreSkieursParCouleurPiste;
     }
 
+
 }

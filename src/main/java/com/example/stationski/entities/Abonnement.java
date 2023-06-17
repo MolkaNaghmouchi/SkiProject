@@ -29,5 +29,7 @@ public class Abonnement implements Serializable {
     private Float prixAbon;
     @Enumerated(EnumType.STRING)
     private TypeAbonnement typeAbon;
+    @OneToOne
+    private  Skieur  Skieur;
 
 }

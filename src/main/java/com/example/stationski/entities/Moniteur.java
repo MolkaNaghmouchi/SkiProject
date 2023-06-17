@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -28,6 +29,6 @@ public class Moniteur implements Serializable {
     private float prime;
     @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JsonIgnore
-    private Set<Cours> coursSet;
+    private List<Cours> coursSet;
 
 }
