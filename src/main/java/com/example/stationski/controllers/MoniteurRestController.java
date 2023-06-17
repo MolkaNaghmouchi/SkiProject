@@ -75,7 +75,7 @@ public class MoniteurRestController {
     }
 
 
-    @Operation(description = "best moniteurs")
+    @Operation(description = "MONITEUR")
     @GetMapping("/bestMoniteur")
     public Moniteur bestMoniteur() {
 
